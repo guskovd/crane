@@ -93,7 +93,6 @@ let
           else null;
 
         extractedPackages = downloadCargoPackageFromGit {
-          GIT_LFS_SKIP_SMUDGE = "1";
           inherit (p) git;
           inherit ref;
           rev = p.lockedRev;
