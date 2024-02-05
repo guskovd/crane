@@ -43,6 +43,7 @@ let
   };
 in
 runCommand "cargo-git" deps ''
+  export GIT_LFS_SKIP_SMUDGE=1
   mkdir -p $out
   declare -A existing_crates
   while read -r cargoToml; do
